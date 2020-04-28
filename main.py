@@ -21,3 +21,6 @@ for place in places['data']:
     except KeyError:
         print('ERROR ---- ', place['name'], place['location'].get('zip'), place['checkins'])
 
+
+# grab place IDs using search
+# for each place ID, grab open status (differently_open_offerings, hours, temporary_status)
