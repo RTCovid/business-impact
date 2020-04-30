@@ -81,6 +81,7 @@ def aggregate_details_from_search(search_results_df):
         details_list_to_agg.append(business_details_yelp(yelp_id))
 
     all_search_details_df = pd.concat(details_list_to_agg, sort=False)
+    # TODO: Re-index?
 
     return all_search_details_df
 
