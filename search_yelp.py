@@ -128,13 +128,17 @@ palm_springs_params = {
     'location': 'palm springs, CA',
     'limit': 50
 }
+# TODO: Searching by 'location' parameter can return erroneous results
+#  (businesses in other similar-sounding cities, etc) -- validate results by zipcode obtained from location in details?
 
-palm_springs_df = run_full_search(palm_springs_params)
+# palm_springs_df = run_full_search(palm_springs_params)
+# palm_springs_df.to_pickle("./palm_springs.pkl")
+palm_springs_df = pd.read_pickle("./palm_springs.pkl")
 print(palm_springs_df.shape)
 print(palm_springs_df.columns)
 print(palm_springs_df)
 
-palm_springs_df.to_pickle("./palm_springs.pkl")
+print(palm_springs_df.groupby(by=['is_closed', 'is_claimed'], as_index=False)['id'].agg('count'))
 
 # TODO: Sample and collect a few cities/locations, aggregate into database
 
@@ -142,6 +146,7 @@ palm_springs_df.to_pickle("./palm_springs.pkl")
 # TODO: Store somewhere -- USDR database?
 # TODO: Business closure rate, modified hours rate // by zipcode, category
 # TODO: Identify Opportunity Zones (by zipcode)
+# TODO: Hypothesis: economic activity in OZs is statistically significantly lower than that in non-OZs
 
 
 # TODO: Rename this file to something more general
