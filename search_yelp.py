@@ -40,6 +40,7 @@ def loop_offset_search(search_params):
     offset_mult = 1
     while search_dfs_list[-1].shape[0] == 50:
         print('---------------------- Looping through results... ----------------------')
+        print('More data available...most recent scraped data # rows:', search_dfs_list[-1].shape[0])
         print('# dfs in list:', len(search_dfs_list))
         search_params['offset'] = 50 * offset_mult
         print('# results:', search_params['offset'])
@@ -87,12 +88,21 @@ def aggregate_details_from_search(search_results_df):
 
 
 def extract_zip_code(details_df_row):
-    if not isinstance(details_df_row['location']['zip_code'], str):
-        return str(details_df_row['location']['zip_code'])
-    elif len(details_df_row['location']['zip_code']) < 1:
-        return None
+    print('--------------------------------------------------------')
+    print(details_df_row['location'])
+    print(type(details_df_row['location']))
+    print(details_df_row['location']['zip_code'])
+    print(type(details_df_row['location']['zip_code']))
+    if details_df_row['location']:
+        if not isinstance(details_df_row['location']['zip_code'], str):
+            return str(details_df_row['location']['zip_code'])
+        elif len(details_df_row['location']['zip_code']) < 1:
+            return None
+        else:
+            return details_df_row['location']['zip_code']
     else:
-        return details_df_row['location']['zip_code']
+        print('NO ZIP CODE: ', details_df_row['id'], details_df_row['location'])
+        return 'No zip code found'
 
 
 def run_full_search(search_params):
@@ -100,13 +110,13 @@ def run_full_search(search_params):
     search_df = loop_offset_search(search_params)
     print('\nGetting details on all matching businesses (may take a few minutes)...')
     details_df = aggregate_details_from_search(search_df)
-    # TODO: Add search params to column? Or at least location?
-    print(details_df.columns)
-    print(details_df.head())
-    print(details_df[['name', 'id', 'location', 'is_closed', 'is_claimed', 'transactions']])
+    details_df['location_search'] = search_params['location']
+    # print(details_df.columns)
+    # print(details_df.head())
+    # print(details_df[['name', 'id', 'location', 'is_closed', 'is_claimed', 'transactions']])
     details_df['zip_code'] = details_df.apply(lambda row: extract_zip_code(row), axis=1)
     details_df['api_call_datetime'] = datetime.now()
-    print(details_df[['id', 'name', 'zip_code']])
+    # print(details_df[['id', 'name', 'zip_code']])
 
     return details_df
 
@@ -139,6 +149,27 @@ print(palm_springs_df.columns)
 print(palm_springs_df)
 
 print(palm_springs_df.groupby(by=['is_closed', 'is_claimed'], as_index=False)['id'].agg('count'))
+
+
+indio_params = {
+    'location': 'indio, CA',
+    'limit': 50
+}
+indio_df = run_full_search(indio_params)
+indio_df.to_pickle("./indio.pkl")
+
+riverside_params = {
+    'location': 'riverside, CA',
+    'limit': 50
+}
+riverside_df = run_full_search(riverside_params)
+riverside_df.to_pickle("./riverside.pkl")
+
+
+sample_df = pd.concat([palm_springs_df, indio_df, riverside_df])
+print(sample_df)
+
+
 
 # TODO: Sample and collect a few cities/locations, aggregate into database
 
