@@ -27,7 +27,7 @@ def business_search_yelp(search_params):
     # proceed only if the status code is 200
     if response.status_code == 200:
         # search_results_json = json.loads(response.text)
-        search_results_df = pd.DataFrame.from_dict(response.json()['businesses'])
+        search_results_df = pd.DataFrame.from_dict(response.json()['businesses'])  # TODO: Keep this as json/dict for now (don't make into DF)
         return search_results_df
 
     else:
@@ -171,13 +171,11 @@ print(sample_df)
 
 
 
-# TODO: Sample and collect a few cities/locations, aggregate into database
+# TODO: Sample and collect a few cities/locations, aggregate into database (where? USDR/RTCovid resource?)
 
 # TODO: Cross-reference businesses with FB, Google, etc? (by name, location?) Yelp business match: https://www.yelp.com/developers/documentation/v3/business_match
-# TODO: Store somewhere -- USDR database?
-# TODO: Business closure rate, modified hours rate // by zipcode, category
-# TODO: Identify Opportunity Zones (by zipcode)
-# TODO: Hypothesis: economic activity in OZs is statistically significantly lower than that in non-OZs
+# TODO: Business closure rate, modified hours rate // segment by zip_code, biz category
+# TODO: Identify Opportunity Zones (by zip_code)
 
+# TODO: Hypothesis: economic activity in OZs is statistically significantly lower than that in non-OZs? Or is this too much further than 'just the facts'?
 
-# TODO: Rename this file to something more general
