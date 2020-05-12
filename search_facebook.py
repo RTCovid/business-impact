@@ -40,9 +40,9 @@ def business_search_facebook(fb_graph, location_query=None, location_center=None
     elif location_query:
         try:
             search_results = fb_graph.search(type='place',
-                                     fields='name,id,location',
-                                     q="palm springs, CA"
-                                     )
+                                             fields='name,id,location',
+                                             q=location_query
+                                             )
         except:  # TODO: Better error handling (which exceptions to anticipate?) Also, logging?
             search_results = None
             print('Error: Facebook Graph API search invalid (location query provided).')
@@ -78,11 +78,11 @@ def business_details_facebook(fb_graph, facebook_id, detail_fields):
         place_details[m] = None  # TODO: Or null/NA ?
 
     try:
-        zipcode = place_details['location']['zip']
+        zip_code = place_details['location']['zip']
     except:
-        zipcode = 'No zip code found'
+        zip_code = 'No zip code found'
 
-    place_details['zip_code'] = zipcode
+    place_details['zip_code'] = zip_code
 
     return place_details
 
@@ -97,6 +97,7 @@ def all_business_details_facebook(fb_graph, places, detail_fields):
     all_business_details_df['api_call_datetime'] = datetime.now()
 
     return all_business_details_df
+
 
 def main():
     fb_token = os.environ['FB_ACCESS_TOKEN']  # this access token will expire on June 29, 2020
