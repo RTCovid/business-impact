@@ -22,7 +22,7 @@ Opportunity Zones are designated low-income Census tracts where new investments,
 
 ## Team and stakeholders
 ### Project team
- - Stacy Cumberbatch - Executive Fellow In Residence with Accelerator for America, the Riverside County Economic Development Agency, and the University of California Riverside Center for Social Innovation
+ - Stacy Cumberbatch – Executive Fellow In Residence with Accelerator for America, the Riverside County Economic Development Agency, and the University of California Riverside Center for Social Innovation
  - Andrew Suprenant – Product Manager, U.S. Digital Response
  - Alex Merryman – Data Scientist, U.S. Digital Response
  
