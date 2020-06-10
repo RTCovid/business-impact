@@ -11,3 +11,6 @@ _Riverside County is a county located in the southern portion of the U.S. state 
 Additional details
  - The county has forty-nine census tracts (out of approximately 1,000 nationwide)
  - Amazon is a big local employer, providing approximately 50% of local jobs. Most other jobs are with smaller companies. 
+
+## Opportunity Zones
+Opportunity Zones are designated low-income Census tracts where new investments, under certain conditions, may be eligible for preferential tax treatment. These zones, created by the Tax Cuts and Jobs Act of 2017, are designed to spur economic development and job creation in distressed communities throughout the country and U.S. possessions by providing tax benefits to investors who invest eligible capital into these communities. Taxpayers may defer tax on eligible capital gains by making an appropriate investment in a Qualified Opportunity Fund and meeting other requirements.
