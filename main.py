@@ -30,9 +30,10 @@ def load_creds():
 
 creds = load_creds()
 
-google_places = search_google.place_search_google(creds['google-maps-api-key'], 'mcdonalds')
+google_places = search_google.place_search_google(creds['google-maps-api-key'], 'starbucks')
+print(google_places)
 google_places_df = search_google.parse_results_google(google_places)
-
+print(google_places_df)
 
 fb_graph_obj = search_facebook.init_fb_graph_object(creds['facebook-graph-api-token'])
 fb_places = search_facebook.business_search_facebook(fb_graph_obj, "riverside county, ca")
