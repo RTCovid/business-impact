@@ -14,3 +14,8 @@ Additional details
 
 ## Opportunity Zones
 Opportunity Zones are designated low-income Census tracts where new investments, under certain conditions, may be eligible for preferential tax treatment. These zones, created by the Tax Cuts and Jobs Act of 2017, are designed to spur economic development and job creation in distressed communities throughout the country and U.S. possessions by providing tax benefits to investors who invest eligible capital into these communities. Taxpayers may defer tax on eligible capital gains by making an appropriate investment in a Qualified Opportunity Fund and meeting other requirements. [IRS.gov](https://www.irs.gov/newsroom/opportunity-zones-frequently-asked-questions)
+
+## Team
+ - Stacy Cumberbatch - Executive Fellow In Residence with Accelerator for America, the Riverside County Economic Development Agency, and the University of California Riverside Center for Social Innovation
+ - Andrew Suprenant – Product Manager, U.S. Digital Response
+ - Alex Merryman – Data Scientist, U.S. Digital Response
