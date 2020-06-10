@@ -7,14 +7,14 @@ Today, we have an anecdotal sense of which communities are hardest hit, but we w
 ### Riverside County, CA
 Though all communities in the United States (and also nationwide) are affected economically by COVID-19, the focus of this phase of work is Riverside County, California. 
 
-_Riverside County is a county located in the southern portion of the U.S. state of California. As of the 2010 census, the population was 2,189,641, making it the fourth-most populous county in California and the 10th-most populous in the United States. The name was derived from the city of Riverside, which is the county seat._ ([Wikipedia])(https://en.wikipedia.org/wiki/Riverside_County,_California)
+_Riverside County is a county located in the southern portion of the U.S. state of California. As of the 2010 census, the population was 2,189,641, making it the fourth-most populous county in California and the 10th-most populous in the United States. The name was derived from the city of Riverside, which is the county seat._ ([Wikipedia](https://en.wikipedia.org/wiki/Riverside_County,_California))
 
 Additional details
  - The county has forty-nine census tracts (out of approximately 1,000 nationwide)
  - Amazon is a big local employer, providing approximately 50% of local jobs. Most other jobs are with smaller companies. 
 
 ### Opportunity Zones
-Opportunity Zones are designated low-income Census tracts where new investments, under certain conditions, may be eligible for preferential tax treatment. These zones, created by the Tax Cuts and Jobs Act of 2017, are designed to spur economic development and job creation in distressed communities throughout the country and U.S. possessions by providing tax benefits to investors who invest eligible capital into these communities. Taxpayers may defer tax on eligible capital gains by making an appropriate investment in a Qualified Opportunity Fund and meeting other requirements. ([IRS.gov])(https://www.irs.gov/newsroom/opportunity-zones-frequently-asked-questions)
+Opportunity Zones are designated low-income Census tracts where new investments, under certain conditions, may be eligible for preferential tax treatment. These zones, created by the Tax Cuts and Jobs Act of 2017, are designed to spur economic development and job creation in distressed communities throughout the country and U.S. possessions by providing tax benefits to investors who invest eligible capital into these communities. Taxpayers may defer tax on eligible capital gains by making an appropriate investment in a Qualified Opportunity Fund and meeting other requirements. ([IRS.gov](https://www.irs.gov/newsroom/opportunity-zones-frequently-asked-questions))
 
 ### Additional context
  - Small businesses shed more than 11 million jobs in April – making up more than half of the 20 million lost in the private sector last month, according to payments processor ADP. ([Axios](https://www.axios.com/reckoning-small-business-coronavirus-fa6affe7-2458-459f-91d6-76f191ccb23e.html))
