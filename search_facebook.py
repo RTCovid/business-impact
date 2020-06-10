@@ -9,6 +9,7 @@ def init_fb_graph_object(fb_access_token, api_version=3.1):
     try:
         graph = facebook.GraphAPI(access_token=fb_access_token, version=api_version)
     except:  # TODO: Better error handling (which exceptions to anticipate?)
+        graph = None
         print('Error: Unable to initialize Facebook Graph API access.')
 
     return graph
