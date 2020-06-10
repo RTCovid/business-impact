@@ -17,8 +17,8 @@ Additional details
 Opportunity Zones are designated low-income Census tracts where new investments, under certain conditions, may be eligible for preferential tax treatment. These zones, created by the Tax Cuts and Jobs Act of 2017, are designed to spur economic development and job creation in distressed communities throughout the country and U.S. possessions by providing tax benefits to investors who invest eligible capital into these communities. Taxpayers may defer tax on eligible capital gains by making an appropriate investment in a Qualified Opportunity Fund and meeting other requirements. ([IRS.gov](https://www.irs.gov/newsroom/opportunity-zones-frequently-asked-questions))
 
 ### Additional context
- - Small businesses shed more than 11 million jobs in April – making up more than half of the 20 million lost in the private sector last month, according to payments processor ADP. ([Axios](https://www.axios.com/reckoning-small-business-coronavirus-fa6affe7-2458-459f-91d6-76f191ccb23e.html))
- - A study by top academic researchers projects that more than 100,000 small businesses have closed permanently since late March, with at least 2% of all American small businesses now gone. ([The Washington Post](https://www.washingtonpost.com/business/2020/05/12/small-business-used-define-americas-economy-pandemic-could-end-that-forever/))
+ - Small businesses shed more than 11 million jobs in April – making up more than half of the 20 million lost in the private sector last month, according to payments processor ADP. ([_Axios_](https://www.axios.com/reckoning-small-business-coronavirus-fa6affe7-2458-459f-91d6-76f191ccb23e.html))
+ - A study by top academic researchers projects that more than 100,000 small businesses have closed permanently since late March, with at least 2% of all American small businesses now gone. ([_The Washington Post_](https://www.washingtonpost.com/business/2020/05/12/small-business-used-define-americas-economy-pandemic-could-end-that-forever/))
 
 ## Team and stakeholders
 ### Project team
