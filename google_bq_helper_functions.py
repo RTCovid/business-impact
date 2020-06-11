@@ -16,7 +16,7 @@ def load_bq_creds():
 def load_csv_bq(filename, dataset_id, table_id):
     client = bigquery.Client()
     print(client)
-    dataset_ref = client.dataset(dataset_id)
+    dataset_ref = client.dataset(dataset_id)  # TODO
     table_ref = dataset_ref.table(table_id)
     job_config = bigquery.LoadJobConfig()
     job_config.source_format = bigquery.SourceFormat.CSV

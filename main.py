@@ -66,6 +66,8 @@ def bq_connect():
     google_bq_helper_functions.load_csv_bq(file_id, dataset_id, table_id)
 
 
+# https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.to_gbq.html
+
 bq_connect()
 
 
