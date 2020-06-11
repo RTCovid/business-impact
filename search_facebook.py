@@ -1,10 +1,37 @@
 import pandas as pd
 import os
+import requests
 from datetime import datetime
 import facebook
 
 
-def init_fb_graph_object(fb_access_token, api_version=3.1):
+# TODO: Facebook API Python wrapper/package is outdated, only supports Facebook API version 3.1 (Facebook API version up to 7.0 now)
+#  Facebook API Python wrapper/package latest release: 11/6/2018
+#  https://facebook-sdk.readthedocs.io/en/latest/changes.html
+#  https://developers.facebook.com/docs/graph-api/changelog#versions
+
+
+def get_long_lived_user_access_token(creds, fb_graph_api_version='v7.0'):
+    """
+    https://developers.facebook.com/docs/facebook-login/access-tokens/refreshing
+
+    :param creds:
+    :param fb_graph_api_version:
+    :return:
+    """
+
+    params = (
+        ('grant_type', 'fb_exchange_token'),
+        ('client_id', creds['fb-app_id']),
+        ('client_secret', creds['fb-app-secret']),
+        ('fb_exchange_token', creds['fb-user-access-token']),
+    )
+
+    response = requests.get(f'https://graph.facebook.com/{fb_graph_api_version}/oauth/access_token', params=params)
+    return response
+
+
+def init_fb_graph_object(fb_access_token, api_version='3.1'):
     try:
         graph = facebook.GraphAPI(access_token=fb_access_token, version=api_version)
     except:  # TODO: Better error handling (which exceptions to anticipate?)
