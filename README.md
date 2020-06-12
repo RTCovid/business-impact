@@ -37,4 +37,4 @@ Opportunity Zones are designated low-income Census tracts where new investments,
  - Other entities addressing the same or similar issues (e.g. Opportunity Insights, Beeck Center for Social Impact and Innovation)
 
 ## Timeline
-This project began in May 2020.
+This project began in May 2020. Our goal is to work for three months (through September 2020) and deliver regularly, with a key check in with project stakeholders in August.
