@@ -3,6 +3,9 @@ An economic crisis closely followed the public health crisis of COVID-19. In ord
 
 Today, we have an anecdotal sense of which communities are hardest hit, but we want to find evidence to support or refute our hypotheses. We have access to economic data at a county level, but we want to develop more granular insights finding or deriving data for the zip code, or census tract, level to help measure the local economic impact of COVID-19.
 
+## Hypothesis and approach
+Our hypothesis is that we can aggregate current data and, if needed, collect new data in order to develop a better understanding of the local economic impact.
+
 ## Context
 ### Riverside County, CA
 Though all communities in the United States (and also nationwide) are affected economically by COVID-19, the focus of this phase of work is Riverside County, California. 
