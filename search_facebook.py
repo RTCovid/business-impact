@@ -134,6 +134,7 @@ def main():
 
     print('Searching FB API...')
     palm_springs_places = business_search_facebook(graph_obj, location_query='palm springs, ca')
+    # TODO: Add location_query as field
 
     detail_fields_1 = "id,name,description,category_list,checkins,location,temporary_status," \
                       "differently_open_offerings,hours," \
@@ -143,7 +144,7 @@ def main():
 
     print('Getting details on each business...')
     palm_springs_details = all_business_details_facebook(graph_obj, palm_springs_places, detail_fields_1)
-    print(palm_springs_details[['name', 'is_always_open']])
+    # print(palm_springs_details[['name', 'is_always_open']])
 
     return palm_springs_details
 
