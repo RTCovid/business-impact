@@ -1,6 +1,7 @@
 import requests
 import json
 import pandas as pd
+from datetime import datetime
 
 # API docs: https://developers.google.com/places/web-service/search
 
@@ -25,4 +26,6 @@ def place_search_google(google_maps_api_key, google_input):
 
 def parse_results_google(results):
     df = pd.DataFrame.from_records(results['candidates'])
+    df['api_call_datetime'] = datetime.now()
+
     return df
