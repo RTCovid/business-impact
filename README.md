@@ -9,6 +9,9 @@ Our hypothesis is that we can aggregate current data and, if needed, collect new
 ### Data categories
 Business formation, business open/closed status, payments processing, foreclosures, bankruptcy, employment/unemployment
 
+### Scaling 
+Though this project focuses on Riverside County, we will watch out for opportunities to forge partnerships to scale this work, extend it to other communities, and build upon the similar work of others in order to have the highest impact and leverage.
+
 ## Context
 ### Riverside County, CA
 Though all communities in the United States (and also nationwide) are affected economically by COVID-19, the focus of this phase of work is Riverside County, California. 
