@@ -40,13 +40,14 @@ def business_search_yelp(creds, search_params):
 
 def loop_offset_search(creds, search_params):
     search_dfs_list = [business_search_yelp(creds, search_params)]
+    # print(search_dfs_list)
     offset_mult = 1
-    while search_dfs_list[-1].shape[0] == 50 and offset_mult <= 15:  # TODO: Remove the `and offset_mult <= 15` condition
+    while search_dfs_list[-1].shape[0] == 50:  # TODO: Throwing error: NoneType search_dfs_list[-1] has no property shape ???
         print('---------------------- Looping through results... ----------------------')
         print('More data available...most recent scraped data # rows:', search_dfs_list[-1].shape[0])
-        print('# dfs in list:', len(search_dfs_list))
+        print('Num dfs in list:', len(search_dfs_list))
         search_params['offset'] = 50 * offset_mult
-        print('# results:', search_params['offset'])
+        print('Num results:', search_params['offset'], '+/- 49')
         search_dfs_list.append(business_search_yelp(creds, search_params))
         offset_mult += 1
 

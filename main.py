@@ -60,7 +60,6 @@ def google_search_append(query):
     return google_places_df
 
 
-# google_places_df = google_search_append('El Campanario Restaurant')
 
 
 # ====================================== FACEBOOK API SEARCH & APPEND ====================================== #
@@ -102,8 +101,9 @@ def fb_search_append_gbq(location_query):
 
     google_bq_helper_functions.append_df_gbq(fb_api_df, gbq_fb_table_id, gbq_project_id)
 
+    print(f"Appended {fb_api_df.shape[0]} row(s) to {gbq_fb_table_id}.")
 
-# fb_search_append_gbq('moreno valley, ca')
+
 
 
 # ====================================== YELP API SEARCH & APPEND ====================================== #
@@ -129,14 +129,11 @@ def yelp_search_append(query):
     #  (businesses in other similar-sounding cities, etc) -- validate results by zipcode obtained from location in details?
 
     yelp_api_df = search_yelp.run_full_search(creds, search_params)
-    # yelp_api_df.to_pickle("./palm_springs.pkl")
-    # yelp_api_df = pd.read_pickle("./palm_springs.pkl")
     # print(yelp_api_df.shape)
-    # print(yelp_api_df.columns)
     print(yelp_api_df.head())
     print(yelp_api_df.columns)
 
-    print(yelp_api_df.groupby(by=['is_closed', 'is_claimed'], as_index=False)['id'].agg('count'))
+    # print(yelp_api_df.groupby(by=['is_closed', 'is_claimed'], as_index=False)['id'].agg('count'))
 
     gbq_creds = google_bq_helper_functions.load_gbq_creds()
     gbq_project_id = gbq_creds['project_id']
@@ -144,8 +141,19 @@ def yelp_search_append(query):
 
     google_bq_helper_functions.append_df_gbq(yelp_api_df, gbq_yelp_table_id, gbq_project_id)
 
+    print(f"Appended {yelp_api_df.shape[0]} row(s) to {gbq_yelp_table_id}.")
 
-yelp_search_append('indio, ca')
+
+
+print("Searching Google API...")
+google_places_df = google_search_append('green acres, ca')
+
+print("Searching Facebook API...")
+fb_search_append_gbq('green acres, ca')
+
+print("Searching Yelp API...")
+yelp_search_append('green acres, ca')
+
 
 # gbq_creds = google_bq_helper_functions.load_gbq_creds()
 # sql = "select * from `business_data.yelp_data`"
