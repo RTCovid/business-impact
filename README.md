@@ -6,7 +6,7 @@ Today, we have an anecdotal sense of which communities are hardest hit, but we w
 ## Hypothesis and approach
 Our hypothesis is that we can aggregate current data and, if needed, collect new data in order to develop a better understanding of the local economic impact. Whenever possible, we will share out our work so other communities can potentially leverage it for their own use.
 
-### Data categories
+### Data categories (subject to change)
 Business formation, business open/closed status, payments processing, foreclosures, bankruptcy, employment/unemployment
 
 ### Scaling 
