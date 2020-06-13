@@ -6,6 +6,9 @@ Today, we have an anecdotal sense of which communities are hardest hit, but we w
 ## Hypothesis and approach
 Our hypothesis is that we can aggregate current data and, if needed, collect new data in order to develop a better understanding of the local economic impact. Whenever possible, we will share out our work so other communities can potentially leverage it for their own use.
 
+### Data categories
+Business formation, business open/closed status, payments processing, foreclosures, bankruptcy, employment/unemployment
+
 ## Context
 ### Riverside County, CA
 Though all communities in the United States (and also nationwide) are affected economically by COVID-19, the focus of this phase of work is Riverside County, California. 
