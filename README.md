@@ -3,10 +3,10 @@ An economic crisis closely followed the public health crisis of COVID-19. In ord
 
 Today, we have an anecdotal sense of which communities are hardest hit, but we want to find evidence to support or refute our hypotheses. We have access to economic data at a county level, but we want to develop more granular insights finding or deriving data for the zip code, or census tract, level to help measure the local economic impact of COVID-19.
 
-## Hypothesis and approach
-Our hypothesis is that we can aggregate current data and, if needed, collect new data in order to develop a better understanding of the local economic impact. Whenever possible, we will share out our work so other communities can potentially leverage it for their own use.
+## Hypothesis
+Our hypothesis is that we can aggregate current data and, if needed, collect new data in order to develop a better understanding of the local economic impact. 
 
-### Data categories (subject to change)
+### Data categories
 Business formation, business open/closed status, payments processing, foreclosures, bankruptcy, employment/unemployment
 
 ### Scaling 
@@ -42,5 +42,7 @@ Opportunity Zones are designated low-income Census tracts where new investments,
  - Other communities facing similar problems
  - Other entities addressing the same or similar issues (e.g. Opportunity Insights, Beeck Center for Social Impact and Innovation)
 
-## Timeline
-This project began in May 2020. Our goal is to work for three months (through September 2020) and deliver regularly, with a key check in with project stakeholders in August.
+## Timeline and approach
+This project began in May 2020, and our current plan is to work for three months (through September 2020) and deliver regularly, with a key check in with project stakeholders in August. 
+
+Though we are focused on the goals of this project, the details are subject to change.
