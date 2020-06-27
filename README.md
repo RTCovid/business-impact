@@ -6,8 +6,8 @@ Today, we have an anecdotal sense of which communities are hardest hit, but we w
 ## Hypothesis
 Our hypothesis is that we can aggregate current data and, if needed, collect new data in order to develop a better understanding of the local economic impact. 
 
-### Data categories
-Business formation, business open/closed status, payments processing, foreclosures, bankruptcy, employment/unemployment
+### Data Categories
+Business formation, business open/closed status, payments processing, foreclosures, bankruptcy, employment/unemployment.
 
 ### Scaling 
 Though this project focuses on Riverside County, we will watch out for opportunities to forge partnerships to scale this work, extend it to other communities, and build upon the similar work of others in order to have the highest impact and leverage.
@@ -19,7 +19,7 @@ Though all communities in the United States (and also nationwide) are affected e
 _Riverside County is a county located in the southern portion of the U.S. state of California. As of the 2010 census, the population was 2,189,641, making it the fourth-most populous county in California and the 10th-most populous in the United States. The name was derived from the city of Riverside, which is the county seat._ ([Wikipedia](https://en.wikipedia.org/wiki/Riverside_County,_California))
 
 Additional details
- - The county has forty-nine census tracts (out of approximately 1,000 nationwide)
+ - The county has 49 census tracts (out of approximately 1,000 nationwide).
  - Amazon is a big local employer, providing approximately 50% of local jobs. Most other jobs are with smaller companies. 
 
 ### Opportunity Zones
