@@ -42,10 +42,12 @@ def loop_offset_search(creds, search_params):
     search_dfs_list = [business_search_yelp(creds, search_params)]
     # print(search_dfs_list)
     offset_mult = 1
-    while search_dfs_list[-1].shape[0] == 50:  # TODO: Throwing error: NoneType search_dfs_list[-1] has no property shape ???
+    while offset_mult < 20 and search_dfs_list[-1].shape[0] == 50:
+        # Conditioning on `offset_mult < 20` to avoid Yelp API error: `{"error": {"code": "VALIDATION_ERROR", "description": "Too many results requested, limit+offset must be <= 1000."}}`
+        # TODO: If approaching 1000 results, change offset to get only exactly 1000, no more (<= 1000)
         print('---------------------- Looping through results... ----------------------')
         print('More data available...most recent scraped data # rows:', search_dfs_list[-1].shape[0])
-        print('Num dfs in list:', len(search_dfs_list))
+        print('Num DFs in list:', len(search_dfs_list))
         search_params['offset'] = 50 * offset_mult
         print('Num results:', search_params['offset'], '+/- 49')
         search_dfs_list.append(business_search_yelp(creds, search_params))
