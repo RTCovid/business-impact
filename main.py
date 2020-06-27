@@ -51,11 +51,12 @@ def google_search_append(query):
 
     gbq_creds = google_bq_helper_functions.load_gbq_creds()
     gbq_project_id = gbq_creds['project_id']
-    gbq_google_table_id = 'business_data.google_data' # TODO: Put this in creds.json
+    gbq_google_table_id = 'business_data.google_data'  # TODO: Put this in creds.json
 
+    # TODO: Accept user input to proceed with this step?
     google_bq_helper_functions.append_df_gbq(google_places_df, gbq_google_table_id, gbq_project_id)
 
-    print(f"Appended {google_places_df.shape[0]} row(s) to {gbq_google_table_id}.")
+    print(f"Appended {google_places_df.shape[0]} row(s) to `{gbq_google_table_id}`.")
 
     return google_places_df
 
@@ -99,9 +100,10 @@ def fb_search_append_gbq(location_query):
     gbq_project_id = gbq_creds['project_id']
     gbq_fb_table_id = 'business_data.facebook_data'
 
+    # TODO: Accept user input to proceed with this step?
     google_bq_helper_functions.append_df_gbq(fb_api_df, gbq_fb_table_id, gbq_project_id)
 
-    print(f"Appended {fb_api_df.shape[0]} row(s) to {gbq_fb_table_id}.")
+    print(f"Appended {fb_api_df.shape[0]} row(s) to `{gbq_fb_table_id}`.")
 
 
 
@@ -130,8 +132,8 @@ def yelp_search_append(query):
 
     yelp_api_df = search_yelp.run_full_search(creds, search_params)
     # print(yelp_api_df.shape)
-    print(yelp_api_df.head())
-    print(yelp_api_df.columns)
+    # print(yelp_api_df.head())
+    # print(yelp_api_df.columns)
 
     # print(yelp_api_df.groupby(by=['is_closed', 'is_claimed'], as_index=False)['id'].agg('count'))
 
@@ -139,20 +141,28 @@ def yelp_search_append(query):
     gbq_project_id = gbq_creds['project_id']
     gbq_yelp_table_id = 'business_data.yelp_data'
 
+    # TODO: Accept user input to proceed with this step?
     google_bq_helper_functions.append_df_gbq(yelp_api_df, gbq_yelp_table_id, gbq_project_id)
 
-    print(f"Appended {yelp_api_df.shape[0]} row(s) to {gbq_yelp_table_id}.")
+    print(f"Appended {yelp_api_df.shape[0]} row(s) to `{gbq_yelp_table_id}`.")
 
 
+# ---------------------------------------------------------------------------------------
+# TODO: Need sampling of both OZ and non-OZ areas
+search_terms = ['corona, ca', 'hemet, ca', 'san jacinto, ca', 'blythe, ca'
+                'mecca, ca', 'indio, ca', 'coachella, ca', 'thermal, ca', 'la quinta, ca'
+                'palm springs, ca', 'cathedral city, ca', 'desert hot springs, ca',
+                'banning, ca', 'winchester, ca', 'perris, ca', 'moreno valley, ca', 'riverside, ca']
 
 print("Searching Google API...")
-google_places_df = google_search_append('green acres, ca')
+google_places_df = google_search_append('cathedral city, ca')
 
 print("Searching Facebook API...")
-fb_search_append_gbq('green acres, ca')
+fb_search_append_gbq('cathedral city, ca')
 
 print("Searching Yelp API...")
-yelp_search_append('green acres, ca')
+yelp_search_append('cathedral city, ca')
+# ---------------------------------------------------------------------------------------
 
 
 # gbq_creds = google_bq_helper_functions.load_gbq_creds()
@@ -163,6 +173,3 @@ yelp_search_append('green acres, ca')
 
 # TODO: Cross-reference businesses with FB, Google, etc? (by name, location?) Yelp business match: https://www.yelp.com/developers/documentation/v3/business_match
 # TODO: Business closure rate, modified hours rate // segment by zip_code, biz category
-# TODO: Identify Opportunity Zones (by zip_code)
-
-# TODO: Hypothesis: economic activity in OZs is statistically significantly lower than that in non-OZs? Or is this too much further than 'just the facts'?
