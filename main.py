@@ -154,14 +154,15 @@ search_terms = ['corona, ca', 'hemet, ca', 'san jacinto, ca', 'blythe, ca'
                 'palm springs, ca', 'cathedral city, ca', 'desert hot springs, ca',
                 'banning, ca', 'winchester, ca', 'perris, ca', 'moreno valley, ca', 'riverside, ca']
 
-print("Searching Google API...")
-google_places_df = google_search_append('cathedral city, ca')
+# print("Searching Google API...")
+# google_places_df = google_search_append('cathedral city, ca')
+#
+# print("Searching Facebook API...")
+# fb_search_append_gbq('cathedral city, ca')
 
-print("Searching Facebook API...")
-fb_search_append_gbq('cathedral city, ca')
-
-print("Searching Yelp API...")
-yelp_search_append('cathedral city, ca')
+for t in search_terms:
+    print(f"Searching Yelp API for {t}...")
+    yelp_search_append(t)
 # ---------------------------------------------------------------------------------------
 
 

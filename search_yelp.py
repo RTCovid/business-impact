@@ -101,16 +101,20 @@ def extract_zip_code(details_df_row):
     # print(type(details_df_row['location']))
     # print(details_df_row['location']['zip_code'])
     # print(type(details_df_row['location']['zip_code']))
-    if details_df_row['location']:
-        if not isinstance(details_df_row['location']['zip_code'], str):
-            return str(details_df_row['location']['zip_code'])
-        elif len(details_df_row['location']['zip_code']) < 1:
-            return None
+    try:
+        if details_df_row['location']:
+            if not isinstance(details_df_row['location']['zip_code'], str):
+                return str(details_df_row['location']['zip_code'])
+            elif len(details_df_row['location']['zip_code']) < 1:
+                return None
+            else:
+                return details_df_row['location']['zip_code']
         else:
-            return details_df_row['location']['zip_code']
-    else:
-        print('NO ZIP CODE: ', details_df_row['id'], details_df_row['location'])
-        return 'No zip code found'
+            print('NO ZIP CODE: ', details_df_row['id'], details_df_row['location'])
+            return 'No zip code found'
+    except Exception as e:
+        print(f"Error extracting ZIP code from location ({e})")
+        return f'No zip code found (exception {e}).'
 
 
 def run_full_search(creds, search_params):
